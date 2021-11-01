@@ -88,8 +88,8 @@ export const socials = [
   },
   {
     label: "Discord",
-    icon: "Telegram",
-    href: "https://t.me/ApiaryDAO",
+    icon: "Discord",
+    href: "https://discord.com/invite/JZmXNUm8E5",
   },
   {
     label: "Github",
