@@ -60,9 +60,9 @@ const MenuItem: React.FC<FooterProps> = ({
               ))}
             </StyledList>
           ))}
-          <Box display={["none", null, "block"]}>
+          {/* <Box display={["none", null, "block"]}>
             <LogoWithTextIcon isDark width="160px" />
-          </Box>
+          </Box> */}
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
         <StyledToolsContainer
@@ -71,7 +71,7 @@ const MenuItem: React.FC<FooterProps> = ({
           justifyContent="space-between"
         >
           <Flex order={[2, null, 1]} alignItems="center">
-            <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
+            {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
             <LangSelector
               currentLang={currentLang}
               langs={langs}
@@ -89,7 +89,8 @@ const MenuItem: React.FC<FooterProps> = ({
               href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
               target="_blank"
               scale="sm"
-              endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}
+              variant="light"
+              endIcon={<ArrowForwardIcon color={darkColors.text} />}
             >
               {buyCakeLabel}
             </Button>
