@@ -12,6 +12,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSub
       {items.map(({ label, items: menuItems = [], href, icon = "" }) => {
         const statusColor = menuItems?.find((menuItem) => menuItem.status !== undefined)?.status?.color;
         const isActive = activeItem === href;
+        const isLogo = label === "Logo";
         return (
           <DropdownMenu key={`${label}#${href}#${icon}`} items={menuItems} py={1} activeItem={activeSubItem}>
             <MenuItem
@@ -19,7 +20,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSub
               isActive={isActive}
               statusColor={statusColor}
             >
-              {label || <IconComponent iconName={icon} color={isActive ? "secondary" : "textSubtle"} />}
+              {isLogo ? (<IconComponent width="60" height="60" iconName={icon} color={isActive ? "secondary" : "textSubtle"} />) : label}
             </MenuItem>
           </DropdownMenu>
         );

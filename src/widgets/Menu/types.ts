@@ -19,6 +19,7 @@ export interface NavProps {
   userMenu?: ReactElement;
   globalMenu?: ReactElement;
   links: Array<MenuItemsType>;
+  bottomlinks: Array<MenuItemsType>;
   subLinks: Array<SubMenuItemsType>;
   footerLinks: Array<FooterLinkType>;
   activeItem: string;
@@ -26,6 +27,7 @@ export interface NavProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
   cakePriceUsd?: number;
+  apydPriceUsd?: number;
   currentLang: string;
   buyCakeLabel: string;
   langs: Language[];

@@ -14,7 +14,7 @@ import { Modal, ModalProps, useModal } from "../Modal";
 import { LabelText, StyledUserMenu } from "./components/UserMenu";
 import MenuIcon from "./components/UserMenu/MenuIcon";
 import { Variant, variants } from "./components/UserMenu/types";
-import { links, userMenulinks } from "./config";
+import { links, userMenulinks, bottomlinks } from "./config";
 import { footerLinks } from "../../components/Footer/config";
 import Menu from "./Menu";
 import { Language, NavProps } from "./types";
@@ -86,7 +86,9 @@ const defaultProps = {
   setLang: noop,
   currentLang: "EN",
   cakePriceUsd: 0.023158668932877668,
+  apydPriceUsd: 0.23158668932877668,
   links,
+  bottomlinks,
   subLinks: links[0].items,
   footerLinks,
   profile: null,
@@ -136,6 +138,7 @@ export const NotConnected: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         links={links}
+        bottomlinks={bottomlinks}
         subLinks={subLinks}
         footerLinks={footerLinks}
       >

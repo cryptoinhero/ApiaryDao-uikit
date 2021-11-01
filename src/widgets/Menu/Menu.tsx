@@ -9,6 +9,7 @@ import MenuItems from "../../components/MenuItems/MenuItems";
 import { SubMenuItems } from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
 import CakePrice from "../../components/CakePrice/CakePrice";
+import ApydPrice from "../../components/ApydPrice/ApydPrice";
 import Logo from "./components/Logo";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
@@ -50,6 +51,24 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   max-width: 100%;
 `;
 
+export const StyledPriceMenu = styled(Flex)`
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.tertiary};
+  border-radius: 16px;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 8px;
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  &:hover {
+    opacity: 0.65;
+  }
+`;
+
 const Menu: React.FC<NavProps> = ({
   userMenu,
   globalMenu,
@@ -58,7 +77,9 @@ const Menu: React.FC<NavProps> = ({
   currentLang,
   setLang,
   cakePriceUsd,
+  apydPriceUsd,
   links,
+  bottomlinks,
   subLinks,
   footerLinks,
   activeItem,
@@ -107,16 +128,36 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <StyledNav showMenu={showMenu}>
         <Flex>
-          <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-          {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
-        </Flex>
-        <Flex alignItems="center">
+          {isMobile && (
+            <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
+          )}
+          <Flex flexDirection="column">
           {!isMobile && (
+            <StyledPriceMenu>
+              <Box mr="12px">
+                <ApydPrice apydPriceUsd={apydPriceUsd} />
+              </Box>
+            </StyledPriceMenu>
+          )}
+          {!isMobile && (
+            <StyledPriceMenu>
             <Box mr="12px">
               <CakePrice cakePriceUsd={cakePriceUsd} />
             </Box>
+          </StyledPriceMenu>
           )}
-          <Box mt="4px">
+          </Flex>
+        </Flex>
+        <Flex alignItems="center">
+        {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
+        </Flex>
+        <Flex alignItems="center">
+          {/* {!isMobile && (
+            <Box mr="12px">
+              <CakePrice cakePriceUsd={cakePriceUsd} />
+            </Box>
+          )} */}
+          {/* <Box mt="4px">
             <LangSelector
               currentLang={currentLang}
               langs={langs}
@@ -125,8 +166,9 @@ const Menu: React.FC<NavProps> = ({
               color="textSubtle"
               hideLanguage
             />
-          </Box>
-          {globalMenu} {userMenu}
+          </Box> */}
+          {/* {globalMenu}  */}
+          {userMenu}
         </Flex>
       </StyledNav>
       {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />}
@@ -146,7 +188,7 @@ const Menu: React.FC<NavProps> = ({
           />
         </Inner>
       </BodyWrapper>
-      {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
+      {isMobile && <BottomNav items={bottomlinks} activeItem={activeItem} activeSubItem={activeSubItem} />}
     </Wrapper>
   );
 };

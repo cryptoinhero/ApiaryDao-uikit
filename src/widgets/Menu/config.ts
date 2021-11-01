@@ -20,18 +20,78 @@ export const status = {
 
 export const links: MenuItemsType[] = [
   {
-    label: "Trade",
-    href: "/swap",
-    icon: "Swap",
+    label: "Home",
+    href: "/",
+    icon: "Home",
     items: [
-      {
-        label: "Exchange",
-        href: "https://exchange.pancakeswap.finance",
-      },
-      {
-        label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool",
-      },
+      // {
+      //   label: "Exchange",
+      //   href: "https://exchange.pancakeswap.finance",
+      // },
+      // {
+      //   label: "Liquidity",
+      //   href: "https://exchange.pancakeswap.finance/#/pool",
+      // },
+    ],
+  },
+  {
+    label: "DAO Pool",
+    href: "/",
+    icon: "Home",
+    items: [],
+  },
+  {
+    label: "Farms",
+    href: "/",
+    icon: "Home",
+    items: [],
+  },
+  {
+    label: "Honeypot",
+    href: "/",
+    icon: "Home",
+    items: [],
+  },
+  {
+    label: "Logo",
+    href: "/home",
+    icon: "Logo",
+    items: [],
+  },
+  {
+    label: "Vaults",
+    href: "/",
+    icon: "Home",
+    items: [],
+  },
+  {
+    label: "BTCB",
+    href: "/",
+    icon: "Home",
+    items: [],
+  },
+  {
+    label: "Docs",
+    href: "/",
+    icon: "Home",
+    items: [],
+  },
+];
+
+export const bottomlinks: MenuItemsType[] = [
+  {
+    label: "Home",
+    href: "/",
+    icon: "Home",
+    items: [
+      // {
+      //   label: "Exchange",
+      //   href: "https://exchange.pancakeswap.finance",
+      // },
+      // {
+      //   label: "Liquidity",
+      //   href: "https://exchange.pancakeswap.finance/#/pool",
+      // },
     ],
   },
   {
@@ -40,77 +100,52 @@ export const links: MenuItemsType[] = [
     icon: "Earn",
     items: [
       {
-        label: "Earn",
+        label: "DAO Pool",
         href: "/",
       },
       {
-        label: "Yield Farms",
+        label: "Farms",
         href: "/",
       },
       {
-        label: "Syrup pools",
-        href: "/",
-      },
-    ],
-  },
-  {
-    label: "Win",
-    href: "/",
-    icon: "Trophy",
-    items: [
-      {
-        label: "Win",
-        href: "/",
-      },
-      {
-        label: "Predictions",
-        href: "/",
-        status: status.LIVE,
-      },
-      {
-        label: "Lottery",
+        label: "Honeypot",
         href: "/",
       },
     ],
   },
+  // {
+  //   label: "Farms",
+  //   href: "/",
+  //   icon: "Home",
+  //   items: [],
+  // },
+  // {
+  //   label: "Honeypot",
+  //   href: "/",
+  //   icon: "Home",
+  //   items: [],
+  // },
   {
-    label: "",
+    label: "Vaults",
     href: "/",
-    icon: "More",
+    icon: "Vault",
     items: [
       {
-        label: "Info & Analytics",
+        label: "Vaults",
         href: "/",
       },
       {
-        label: "IFO Token Sales",
+        label: "BTC",
         href: "/",
-        status: status.SOON,
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: "NFT Collectibles",
-        href: "/",
-      },
-      {
-        label: "Team Leaderboard",
-        href: "/",
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: "Blog",
-        href: "/",
-      },
-      {
-        label: "Docs & Guides",
-        href: "/",
-        type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
+  },
+ 
+  {
+    label: "Docs",
+    href: "/",
+    icon: "Docs",
+    items: [],
   },
 ];
 
@@ -156,7 +191,7 @@ export const userMenulinks: DropdownMenuItems[] = [
   },
 ];
 
-export const MENU_HEIGHT = 56;
+export const MENU_HEIGHT = 128;
 export const MENU_ENTRY_HEIGHT = 48;
 export const MOBILE_MENU_HEIGHT = 44;
 export const SIDEBAR_WIDTH_FULL = 240;
