@@ -39,6 +39,7 @@ export { default as CopyIcon } from "./Icons/Copy";
 export { default as CrownIcon } from "./Icons/Crown";
 export { default as CurrencyIcon } from "./Icons/Currency";
 export { default as DocsIcon } from "./Icons/Docs";
+export { default as DiscordIcon } from "./Icons/Discord";
 export { default as EarnIcon } from "./Icons/Earn";
 export { default as EarnFilledIcon } from "./Icons/EarnFilled";
 export { default as ErrorIcon } from "./Icons/Error";
