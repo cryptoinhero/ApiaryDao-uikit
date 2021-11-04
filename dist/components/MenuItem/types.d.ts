@@ -5,6 +5,7 @@ export interface MenuItemProps {
     href: string;
     variant?: MenuItemVariant;
     statusColor?: keyof Colors;
+    isDocs?: boolean;
 }
 export declare type StyledMenuItemProps = {
     $isActive?: boolean;

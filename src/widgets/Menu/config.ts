@@ -72,7 +72,7 @@ export const links: MenuItemsType[] = [
   },
   {
     label: "Docs",
-    href: "/",
+    href: "https://apiarydao.gitbook.io/apiarydao/",
     icon: "Home",
     items: [],
   },
@@ -143,8 +143,9 @@ export const bottomlinks: MenuItemsType[] = [
  
   {
     label: "Docs",
-    href: "/",
+    href: "https://apiarydao.gitbook.io/apiarydao/",
     icon: "Docs",
+    showItemsOnMobile: false,
     items: [],
   },
 ];

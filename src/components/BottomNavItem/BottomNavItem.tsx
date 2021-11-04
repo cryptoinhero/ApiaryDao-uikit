@@ -13,6 +13,8 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
   isActive = false,
   ...props
 }) => {
+
+  const isDocs = label === 'Docs'
   const bottomNavItemContent = (
     <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%">
       {iconName && (
@@ -39,10 +41,14 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
     <StyledBottomNavItem type="button" {...props}>
       {bottomNavItemContent}
     </StyledBottomNavItem>
-  ) : (
-    <StyledBottomNavItem as={Link} to={href} {...props}>
+  ) : ( isDocs ? (
+    <StyledBottomNavItem as="a" href={href} target="_blank" {...props}>
       {bottomNavItemContent}
     </StyledBottomNavItem>
+    ):(
+    <StyledBottomNavItem as={Link} to={href} {...props}>
+      {bottomNavItemContent}
+    </StyledBottomNavItem>)
   );
 };
 

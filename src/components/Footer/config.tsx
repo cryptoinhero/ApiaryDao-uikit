@@ -53,7 +53,7 @@ export const footerLinks: FooterLinkType[] = [
     items: [
       {
         label: "Github",
-        href: "https://github.com/pancakeswap",
+        href: "https://github.com/ApiaryDAObsc",
       },
       {
         label: "Documentation",
@@ -94,7 +94,7 @@ export const socials = [
   {
     label: "Github",
     icon: "Github",
-    href: "https://github.com/pancakeswap/",
+    href: "https://github.com/ApiaryDAObsc/",
   },
 ];
 
