@@ -33,7 +33,7 @@ const MenuItem: React.FC<FooterProps> = ({
     <StyledFooter p={["40px 16px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
-          <LogoWithTextIcon isDark width="130px" />
+          {/* <LogoWithTextIcon isDark width="130px" /> */}
         </StyledIconMobileContainer>
         <Flex
           order={[2, null, 1]}
