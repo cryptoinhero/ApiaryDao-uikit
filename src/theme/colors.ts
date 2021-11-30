@@ -2,11 +2,11 @@ import { Colors } from "./types";
 
 export const baseColors = {
   failure: "#ED4B9E",
-  primary: "#282828",
+  primary: "#353535",
   primaryBright: "#53DEE9",
   primaryDark: "#0098A1",
   secondary: "#7645D9",
-  success: "#f6c143",
+  success: "#06b14c",
   warning: "#FFB237",
 };
 
@@ -52,11 +52,11 @@ export const darkColors: Colors = {
   ...baseColors,
   ...additionalColors,
   secondary: "#dadfdf",
-  background: "#08060B",
+  background: "#222222",
   backgroundDisabled: "#3c3742",
-  backgroundAlt: "#050605",
-  backgroundAlt2: "rgba(39, 38, 44, 0.7)",
-  cardBorder: "#383241",
+  backgroundAlt: "#161616",
+  backgroundAlt2: "rgba(27, 27, 27, 0.7)",
+  cardBorder: "#644332",
   contrast: "#FFFFFF",
   dropdown: "#1E1D20",
   dropdownDeep: "#100C18",
@@ -64,7 +64,7 @@ export const darkColors: Colors = {
   input: "#282828",
   inputSecondary: "#262130",
   primaryDark: "#0098A1",
-  tertiary: "#282828",
+  tertiary: "#353535",
   text: "#F4EEFF",
   textDisabled: "#666171",
   textSubtle: "#f6c143",

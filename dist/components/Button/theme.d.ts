@@ -53,6 +53,8 @@ export declare const styleVariants: {
     light: {
         backgroundColor: string;
         color: string;
+        border: string;
+        borderColor: string;
         boxShadow: string;
     };
 };

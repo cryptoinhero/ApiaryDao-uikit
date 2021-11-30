@@ -210,7 +210,7 @@ var scaleVariants$1 = (_a$4 = {},
     _a$4);
 var styleVariants$2 = (_b$3 = {},
     _b$3[variants$6.PRIMARY] = {
-        backgroundColor: "primary",
+        backgroundColor: "textSubtle",
         color: "white",
     },
     _b$3[variants$6.SECONDARY] = {
@@ -248,6 +248,8 @@ var styleVariants$2 = (_b$3 = {},
     _b$3[variants$6.LIGHT] = {
         backgroundColor: "input",
         color: "textSubtle",
+        border: "1px solid",
+        borderColor: "cardBorder",
         boxShadow: "none",
     },
     _b$3);
@@ -1410,9 +1412,9 @@ var Icon$v = function (props) {
 };
 
 var Icon$u = function (_a) {
-    var _b = _a.fillColor, fillColor = _b === void 0 ? "#B8ADD2" : _b, props = __rest(_a, ["fillColor"]);
+    _a.fillColor; var props = __rest(_a, ["fillColor"]);
     return (React__namespace.createElement(Svg, __assign({ viewBox: "0 0 18 15" }, props),
-        React__namespace.createElement("path", { d: "M5.659 15c6.79 0 10.507-5.766 10.507-10.763 0-.16 0-.32-.01-.49A7.578 7.578 0 0018 1.79c-.663.3-1.376.5-2.127.6a3.824 3.824 0 001.63-2.1c-.713.44-1.503.75-2.352.92A3.6 3.6 0 0012.46 0C10.419 0 8.76 1.699 8.76 3.787c0 .3.039.58.098.86-3.064-.15-5.786-1.669-7.61-3.957A3.858 3.858 0 00.75 2.598c0 1.31.654 2.469 1.64 3.148a3.638 3.638 0 01-1.669-.47v.05c0 1.83 1.278 3.368 2.956 3.708-.312.09-.634.13-.976.13-.234 0-.468-.02-.692-.07.468 1.509 1.834 2.598 3.453 2.628a7.284 7.284 0 01-4.585 1.62c-.293 0-.595-.01-.878-.05A10.206 10.206 0 005.659 15z", fill: fillColor })));
+        React__namespace.createElement("path", { d: "M5.659 15c6.79 0 10.507-5.766 10.507-10.763 0-.16 0-.32-.01-.49A7.578 7.578 0 0018 1.79c-.663.3-1.376.5-2.127.6a3.824 3.824 0 001.63-2.1c-.713.44-1.503.75-2.352.92A3.6 3.6 0 0012.46 0C10.419 0 8.76 1.699 8.76 3.787c0 .3.039.58.098.86-3.064-.15-5.786-1.669-7.61-3.957A3.858 3.858 0 00.75 2.598c0 1.31.654 2.469 1.64 3.148a3.638 3.638 0 01-1.669-.47v.05c0 1.83 1.278 3.368 2.956 3.708-.312.09-.634.13-.976.13-.234 0-.468-.02-.692-.07.468 1.509 1.834 2.598 3.453 2.628a7.284 7.284 0 01-4.585 1.62c-.293 0-.595-.01-.878-.05A10.206 10.206 0 005.659 15z" })));
 };
 
 var Icon$t = function (props) {
@@ -2197,9 +2199,12 @@ var getScale$3 = function (_a) {
             return "32px";
     }
 };
-var Checkbox = styled__default['default'].input.attrs({ type: "checkbox" })(templateObject_1$S || (templateObject_1$S = __makeTemplateObject(["\n  appearance: none;\n  overflow: hidden;\n  cursor: pointer;\n  position: relative;\n  display: inline-block;\n  height: ", ";\n  width: ", ";\n  vertical-align: middle;\n  transition: background-color 0.2s ease-in-out;\n  border: 0;\n  border-radius: 8px;\n  background-color: ", ";\n  box-shadow: ", ";\n\n  &:after {\n    content: \"\";\n    position: absolute;\n    border-bottom: 2px solid;\n    border-left: 2px solid;\n    border-color: transparent;\n    top: 30%;\n    left: 0;\n    right: 0;\n    width: 50%;\n    height: 25%;\n    margin: auto;\n    transform: rotate(-50deg);\n    transition: border-color 0.2s ease-in-out;\n  }\n\n  &:hover:not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n\n  &:focus {\n    outline: none;\n    box-shadow: ", ";\n  }\n\n  &:checked {\n    background-color: ", ";\n    &:after {\n      border-color: white;\n    }\n  }\n\n  &:disabled {\n    cursor: default;\n    opacity: 0.6;\n  }\n"], ["\n  appearance: none;\n  overflow: hidden;\n  cursor: pointer;\n  position: relative;\n  display: inline-block;\n  height: ", ";\n  width: ", ";\n  vertical-align: middle;\n  transition: background-color 0.2s ease-in-out;\n  border: 0;\n  border-radius: 8px;\n  background-color: ", ";\n  box-shadow: ", ";\n\n  &:after {\n    content: \"\";\n    position: absolute;\n    border-bottom: 2px solid;\n    border-left: 2px solid;\n    border-color: transparent;\n    top: 30%;\n    left: 0;\n    right: 0;\n    width: 50%;\n    height: 25%;\n    margin: auto;\n    transform: rotate(-50deg);\n    transition: border-color 0.2s ease-in-out;\n  }\n\n  &:hover:not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n\n  &:focus {\n    outline: none;\n    box-shadow: ", ";\n  }\n\n  &:checked {\n    background-color: ", ";\n    &:after {\n      border-color: white;\n    }\n  }\n\n  &:disabled {\n    cursor: default;\n    opacity: 0.6;\n  }\n"])), getScale$3, getScale$3, function (_a) {
+var Checkbox = styled__default['default'].input.attrs({ type: "checkbox" })(templateObject_1$S || (templateObject_1$S = __makeTemplateObject(["\n  appearance: none;\n  overflow: hidden;\n  cursor: pointer;\n  position: relative;\n  display: inline-block;\n  height: ", ";\n  width: ", ";\n  vertical-align: middle;\n  transition: background-color 0.2s ease-in-out;\n  border: 0;\n  border-radius: 8px;\n  background-color: ", ";\n  // border: 1px solid ", ";\n  box-shadow: ", ";\n\n  &:after {\n    content: \"\";\n    position: absolute;\n    border-bottom: 2px solid;\n    border-left: 2px solid;\n    border-color: transparent;\n    top: 30%;\n    left: 0;\n    right: 0;\n    width: 50%;\n    height: 25%;\n    margin: auto;\n    transform: rotate(-50deg);\n    transition: border-color 0.2s ease-in-out;\n  }\n\n  &:hover:not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n\n  &:focus {\n    outline: none;\n    box-shadow: ", ";\n  }\n\n  &:checked {\n    background-color: ", ";\n    &:after {\n      border-color: white;\n    }\n  }\n\n  &:disabled {\n    cursor: default;\n    opacity: 0.6;\n  }\n"], ["\n  appearance: none;\n  overflow: hidden;\n  cursor: pointer;\n  position: relative;\n  display: inline-block;\n  height: ", ";\n  width: ", ";\n  vertical-align: middle;\n  transition: background-color 0.2s ease-in-out;\n  border: 0;\n  border-radius: 8px;\n  background-color: ", ";\n  // border: 1px solid ", ";\n  box-shadow: ", ";\n\n  &:after {\n    content: \"\";\n    position: absolute;\n    border-bottom: 2px solid;\n    border-left: 2px solid;\n    border-color: transparent;\n    top: 30%;\n    left: 0;\n    right: 0;\n    width: 50%;\n    height: 25%;\n    margin: auto;\n    transform: rotate(-50deg);\n    transition: border-color 0.2s ease-in-out;\n  }\n\n  &:hover:not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n\n  &:focus {\n    outline: none;\n    box-shadow: ", ";\n  }\n\n  &:checked {\n    background-color: ", ";\n    &:after {\n      border-color: white;\n    }\n  }\n\n  &:disabled {\n    cursor: default;\n    opacity: 0.6;\n  }\n"])), getScale$3, getScale$3, function (_a) {
     var theme = _a.theme;
-    return theme.colors.input;
+    return theme.colors.backgroundAlt;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.cardBorder;
 }, function (_a) {
     var theme = _a.theme;
     return theme.shadows.inset;
@@ -2211,7 +2216,7 @@ var Checkbox = styled__default['default'].input.attrs({ type: "checkbox" })(temp
     return theme.shadows.focus;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.colors.success;
+    return theme.colors.warning;
 });
 Checkbox.defaultProps = {
     scale: scales$6.MD,
@@ -2749,11 +2754,11 @@ var PancakeToggle = function (_a) {
 
 var baseColors = {
     failure: "#ED4B9E",
-    primary: "#282828",
+    primary: "#353535",
     primaryBright: "#53DEE9",
     primaryDark: "#0098A1",
     secondary: "#7645D9",
-    success: "#f6c143",
+    success: "#06b14c",
     warning: "#FFB237",
 };
 var additionalColors = {
@@ -2772,7 +2777,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#dadfdf", background: "#08060B", backgroundDisabled: "#3c3742", backgroundAlt: "#050605", backgroundAlt2: "rgba(39, 38, 44, 0.7)", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#282828", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#282828", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#f6c143", disabled: "#524B63", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#dadfdf", background: "#222222", backgroundDisabled: "#3c3742", backgroundAlt: "#161616", backgroundAlt2: "rgba(27, 27, 27, 0.7)", cardBorder: "#644332", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#282828", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#353535", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#f6c143", disabled: "#524B63", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
         cardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
@@ -2812,8 +2817,8 @@ var shadows = {
     active: "0px 0px 0px 1px #0098A1, 0px 0px 4px 8px rgba(31, 199, 212, 0.4)",
     success: "0px 0px 0px 1px #31D0AA, 0px 0px 0px 4px rgba(49, 208, 170, 0.2)",
     warning: "0px 0px 0px 1px #ED4B9E, 0px 0px 0px 4px rgba(237, 75, 158, 0.2)",
-    focus: "0px 0px 0px 1px #7645D9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6)",
-    inset: "inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1)",
+    focus: "0px 0px 0px 1px #7645D9, 0px 0px 0px 1px rgba(118, 69, 217, 0.6)",
+    inset: "inset 0px 1px 1px -1px rgba(74, 74, 104, 0.1)",
     tooltip: "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1)",
 };
 var spacing = [0, 4, 8, 16, 24, 32, 48, 64];
@@ -5094,8 +5099,8 @@ var Menu$1 = function (_a) {
                             React__default['default'].createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd })))))),
             React__default['default'].createElement(Flex, { alignItems: "center" }, !isMobile && React__default['default'].createElement(MenuItems, { items: links, activeItem: activeItem, activeSubItem: activeSubItem, ml: "24px" })),
             React__default['default'].createElement(Flex, { alignItems: "center" }, userMenu)),
-        subLinks && React__default['default'].createElement(SubMenuItems, { items: subLinks, mt: MENU_HEIGHT + 1 + "px", activeItem: activeSubItem }),
-        React__default['default'].createElement(BodyWrapper, { mt: !subLinks ? MENU_HEIGHT + 1 + "px" : "0" },
+        subLinks && React__default['default'].createElement(SubMenuItems, { items: subLinks, mt: MENU_HEIGHT + "px", activeItem: activeSubItem }),
+        React__default['default'].createElement(BodyWrapper, { mt: !subLinks ? MENU_HEIGHT + "px" : "0" },
             React__default['default'].createElement(Inner, { isPushed: false, showMenu: showMenu },
                 children,
                 React__default['default'].createElement(MenuItem, { items: footerLinks, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, buyCakeLabel: buyCakeLabel, mb: [MOBILE_MENU_HEIGHT + "px", null, "0px"] }))),

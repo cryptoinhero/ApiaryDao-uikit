@@ -171,8 +171,8 @@ const Menu: React.FC<NavProps> = ({
           {userMenu}
         </Flex>
       </StyledNav>
-      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />}
-      <BodyWrapper mt={!subLinks ? `${MENU_HEIGHT + 1}px` : "0"}>
+      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT}px`} activeItem={activeSubItem} />}
+      <BodyWrapper mt={!subLinks ? `${MENU_HEIGHT}px` : "0"}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
           <Footer

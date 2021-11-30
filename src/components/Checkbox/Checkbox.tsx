@@ -23,7 +23,8 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   transition: background-color 0.2s ease-in-out;
   border: 0;
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.colors.input};
+  background-color: ${({ theme }) => theme.colors.backgroundAlt};
+  // border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   box-shadow: ${({ theme }) => theme.shadows.inset};
 
   &:after {
@@ -52,7 +53,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   }
 
   &:checked {
-    background-color: ${({ theme }) => theme.colors.success};
+    background-color: ${({ theme }) => theme.colors.warning};
     &:after {
       border-color: white;
     }
